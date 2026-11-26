@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function ProductCard({product}) {
 
     return (
-        <Card sx={{ minWidth: 250 }}>
+        <Card sx={{ minWidth: 250, maxWidth: 250 }}>
             <CardMedia sx={{
                 position: 'relative',   // required for fill
                 height: 220,            // give it a fixed height

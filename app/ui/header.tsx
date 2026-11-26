@@ -1,7 +1,21 @@
+'use client'
+
 import { Person, PersonOutlined, SearchOutlined, ShoppingBag, ShoppingBagOutlined } from "@mui/icons-material"
 import { Grid, Stack, Box, Typography, TextField, Paper } from "@mui/material"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 export default function Header() {
+    const [query, setQuery] = useState('')
+    const router = useRouter()
+    
+    const handleSearch = (event: React.FormEvent) => {
+        if (query.trim()){
+            // navigates to /products?q=query
+            router.push(`/products?name=${encodeURIComponent(query)}`)
+        }
+    }
+
     return (
         <>
         {/* desktop header */}
@@ -16,7 +30,15 @@ export default function Header() {
                         sx={{ flex: 1 }}
                         variant="outlined"
                         label="Search Product"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
                         size="small"
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleSearch(e)
+                            }
+                        }}
                     />
                 </Box> 
             </Grid>

@@ -4,7 +4,7 @@ import { Box, Grid, Paper, Stack, Typography } from "@mui/material"
 export default function Footer() {
     return (
         <>
-        {/* <Box sx={{mt:4, bgcolor: '#979797', py: 10}}>
+        <Box sx={{mt:4, bgcolor: '#979797', py: 10}}>
             <Stack sx={{ textAlign:'center'}}>
                 <Typography> Lorem ipsum dolor, sit amet consectetur adipisicing elit </Typography>
                 <Typography> Incidunt consequuntur amet culpa cum itaque neque. </Typography>   
@@ -15,11 +15,9 @@ export default function Footer() {
                 <Typography>About</Typography>
                 <Typography>Careers</Typography>
                 <Typography>History</Typography>
-                <Typography>Services</Typography>
-                <Typography>Projects</Typography>
                 <Typography>Blog</Typography>
             </Box>
-        </Box> */}
+        </Box>
 
         {/* mobile Footer */}
         <Grid 

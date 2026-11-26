@@ -14,11 +14,11 @@ export default async function Home() {
   console.log('products', products)
 
   return (
-    <Box sx={{ px:2 }}>
+    <>
       <BannerCarousel />
       <ProductSection products={products} />
       <BannerCarousel />
       <ProductSection products={products}/>
-    </Box>
+    </>
   );
 }
